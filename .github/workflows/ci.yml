@@ -39,12 +39,12 @@ jobs:
 
       - name: Build
         run: |
-          PYTHON=$(which python) make build
+          PYTHON=$(python -c "import sys; print(sys.executable)") make build
 
       - name: Run unified test suite
         run: |
-          make tests
+          PYTHON=$(python -c "import sys; print(sys.executable)") make tests
 
       - name: Install wheel
         run: |
-          PYTHON=$(which python) make install
+          PYTHON=$(python -c "import sys; print(sys.executable)") make install
