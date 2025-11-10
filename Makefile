@@ -16,6 +16,10 @@ CTEST_FLAGS ?= --output-on-failure
 DEFAULT_PARALLEL := $(shell python3 -c 'import multiprocessing; print(max(1, multiprocessing.cpu_count() - 1))' 2>/dev/null || echo 1)
 CMAKE_PARALLEL ?= $(DEFAULT_PARALLEL)
 
+ifeq ($(shell uname),Darwin)
+export MACOSX_DEPLOYMENT_TARGET ?= 10.14
+endif
+
 ## High-level targets -------------------------------------------------------- ##
 all: build
 
