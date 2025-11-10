@@ -1,0 +1,28 @@
+[build-system]
+requires = [
+    "setuptools>=65",
+    "wheel",
+    "pybind11>=2.11",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "array_sorter"
+version = "0.1.0"
+description = "Efficient Python library for sorting arrays with a C++ backend"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "Z I" },
+]
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: C++",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/linkrage/array-sorter"
